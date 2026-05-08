@@ -43,20 +43,12 @@ const featured = computed(() =>
           </router-link>
           <router-link to="/contacts" class="btn btn-outline btn-lg">Связаться с нами</router-link>
         </div>
-        <div class="hero-stats">
-          <div class="stat"><span class="stat-val">{{ parts.length }}+</span><span class="stat-lbl">Запчастей</span></div>
-          <div class="stat-sep" />
-          <div class="stat"><span class="stat-val">2019–2025</span><span class="stat-lbl">6-е поколение</span></div>
-          <div class="stat-sep" />
-          <div class="stat"><span class="stat-val">100%</span><span class="stat-lbl">Оригинал OEM</span></div>
-          <div class="stat-sep" />
-          <div class="stat"><span class="stat-val">1–5 дн.</span><span class="stat-lbl">Доставка РФ</span></div>
-        </div>
       </div>
       <div class="hero-3d">
         <FordModel3D />
       </div>
     </div>
+
   </section>
 
   <!-- ── Категории ─────────────────────────────────────── -->
@@ -221,17 +213,6 @@ const featured = computed(() =>
   margin-bottom: 32px;
 }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
-.hero-stats {
-  display: flex; align-items: center;
-  background: rgba(255,255,255,.04);
-  border: 1px solid var(--border2);
-  border-radius: var(--r2);
-  overflow: hidden; width: fit-content; max-width: 100%;
-}
-.stat          { padding: 14px 26px; display: flex; flex-direction: column; gap: 2px; }
-.stat-val      { font-size: 19px; font-weight: 800; color: var(--t1); letter-spacing: -.3px; }
-.stat-lbl      { font-size: 11px; color: var(--t3); white-space: nowrap; letter-spacing: .02em; }
-.stat-sep      { width: 1px; background: var(--border); align-self: stretch; }
 
 /* Categories */
 .cats-grid {
@@ -288,8 +269,7 @@ const featured = computed(() =>
 }
 @media (max-width: 768px) {
   .hero-inner   { padding-top: 64px; }
-  .hero-stats   { display: none; }
-  .cats-grid    { grid-template-columns: 1fr 1fr; }
+.cats-grid    { grid-template-columns: 1fr 1fr; }
   .cta-card     { padding: 28px; flex-direction: column; }
   .cta-actions  { width: 100%; }
   .cta-actions .btn { flex: 1; justify-content: center; }
