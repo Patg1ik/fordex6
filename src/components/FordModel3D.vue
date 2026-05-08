@@ -156,13 +156,14 @@ function init() {
 	bounce.position.set(0, -4, 0)
 	scene.add(bounce)
 
+	const modelPath = import.meta.env.BASE_URL + '3d-models/'
 	const mtlLoader = new MTLLoader()
-	mtlLoader.setPath('/3d-models/')
+	mtlLoader.setPath(modelPath)
 	mtlLoader.load('Ford_Explorer.mtl', materials => {
 		materials.preload()
 		const objLoader = new OBJLoader()
 		objLoader.setMaterials(materials)
-		objLoader.setPath('/3d-models/')
+		objLoader.setPath(modelPath)
 		objLoader.load('Ford_Explorer.obj', obj => {
 			const box = new THREE.Box3().setFromObject(obj)
 			const center = box.getCenter(new THREE.Vector3())
