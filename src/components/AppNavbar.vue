@@ -324,7 +324,7 @@ function goCheckout() {
   .nav       { display: none; }
   .mobile-btn { display: flex; }
   .mobile-nav { display: flex; }
-  .navbar-inner { gap: 0; }
+  .navbar-inner { gap: 0; justify-content: space-between; }
   .logo-sub { display: none; }
   .cart-sidebar { width: 100vw; }
 }
